@@ -32,7 +32,6 @@ section:first-child {
 }
 
 /* Introduction section */
-
 #introduction-section {
     height: 100vh;
 }
@@ -49,6 +48,14 @@ section:first-child {
     transform: translateY(52vh);
 }
 
+.infor-register > p:first-child {
+    letter-spacing: 8px;
+}
+
+.infor-register > p:nth-child(2) {
+    font-size: 64px;
+}
+
 #introduction-section .date-container {
     width: 35%;
 }
@@ -59,8 +66,21 @@ section:first-child {
     transition: padding 0.3s ease-in-out;  
 }
 
-/* Timetable section */
+#introduction-section .register-btn i {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
 
+#introduction-section .register-btn:hover i {
+    transform: rotate(-180deg);
+}
+
+/* Agenda section */
+.agenda-paragraph .title-section {
+    width: 40%;
+}
+
+/* Timetable section */
 .timeline-container {
     position: relative;
     width: 90%;
@@ -89,13 +109,13 @@ section:first-child {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Giữ chấm tròn ngay trên line */
+    transform: translate(-50%, -50%); 
 }
 
-/* Set độ cao chứa content (120px) */
+/* Set độ cao chứa content */
 .event {
     position: relative;
-    flex: 1; /* Căn đều khoảng cách giữa các mốc */
+    flex: 1; 
     height: 180px; 
     display: flex;
     flex-direction: column;
@@ -164,6 +184,11 @@ section:first-child {
 .form-control:focus {
     outline: none;
     border-bottom: 2px solid transparent; 
+}
+
+.policy-container {
+    font-size: 12px;
+    opacity: 60%;
 }
 
 .policy-container input[type="checkbox"]{
