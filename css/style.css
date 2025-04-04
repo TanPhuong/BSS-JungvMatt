@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #ffff;
+}
+
+body {
+    background-color: #000;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.gradient-text {
+    background: -webkit-linear-gradient(0deg, #E6C8A7, #B08B62, #C0AB94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient {
+    background: linear-gradient(90deg, #E6C8A7, #B08B62, #E6C8A7) !important;
+}
+
+section {
+    margin: 50px auto !important;
+}
+
+section:first-child {
+    margin-top: 0 !important;
+}
+
+/* Introduction section */
+
+#introduction-section {
+    height: 100vh;
+}
+
+#introduction-section img {
+    height: 100vh;
+    max-height: 924px;
+}
+
+#introduction-section .infor-register {
+    font-size: 18.75px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transform: translateY(52vh);
+}
+
+#introduction-section .date-container {
+    width: 35%;
+}
+
+#introduction-section .register-btn:hover {
+    padding-left: calc(1rem + 5px) !important;
+    padding-right: calc(1rem + 5px) !important;
+    transition: padding 0.3s ease-in-out;  
+}
+
+/* Timetable section */
+
+.timeline-container {
+    position: relative;
+    width: 90%;
+    margin: 50px auto;
+}
+
+/* Tạo đường line ngang */
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #090909, #ffffff, #000000) !important;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+/* Chấm tròn dính vào line */
+.event-marker {
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Giữ chấm tròn ngay trên line */
+}
+
+/* Set độ cao chứa content (120px) */
+.event {
+    position: relative;
+    flex: 1; /* Căn đều khoảng cách giữa các mốc */
+    height: 180px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; 
+}
+
+/* Set các event chẵn */
+.event:nth-child(2n) {
+    justify-content: flex-start;
+}
+
+.event span {
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+/* Form section */
+#form-section {
+    width: 100%;
+    border-radius: 50% 50% 0 0;
+    background-color: #000 !important;
+    margin-top: -450px !important;
+    overflow: visible;
+    position: relative;
+    padding-top: 100px;
+}
+
+#form-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #090909, #ffffff, #000000);
+    border-radius: 50% 50% 0 0;
+    z-index: -1; 
+}
+
+#form-section .form-control {
+    color: #ffffff;
+    border: none;
+    padding-bottom: 16px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#form-section .form-control::placeholder {
+    color: #ffffff;
+    opacity: 60%;
+}
+
+.input-container {
+    position: relative;
+    border-bottom: 2px solid transparent;
+    background-image: linear-gradient(to right, #090909, #ffffff, #000000);
+    background-size: 80% 2px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.form-control:focus {
+    outline: none;
+    border-bottom: 2px solid transparent; 
+}
+
+.policy-container input[type="checkbox"]{
+    display: none;
+}
+
+.policy-container .custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px; 
+    cursor: pointer;
+}
+
+/* Tạo phần tử checkbox */
+.custom-checkbox .checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Khi checkbox được checked */
+input[type="checkbox"]:checked + .checkmark {
+    background-color: #fff; 
+    border-color: #fff; 
+}
+
+/* Thêm dấu check khi được chọn */
+input[type="checkbox"]:checked + .checkmark::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid #000000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+#form-section button:hover {
+    padding-left: calc(1.5rem + 5px) !important;
+    padding-right: calc(1.5rem + 5px) !important;
+    transition: padding 0.3s ease-in-out;  
+}
+
+/* Footer section */
+footer {
+    border-top: 0.5px solid;
+    border-image: linear-gradient(to right, #090909, #090909, #ffffff, #000000, #000000) 1;
+}
