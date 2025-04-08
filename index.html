@@ -15,6 +15,7 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 
     <title>Jung Von Matt</title>
 </head>
@@ -22,13 +23,19 @@
 <body>
     <!-- Introduction section -->
     <section id="introduction-section" class="bg-black">
-        <div class="img-container position-absolute w-100">
-            <img src="./assets/Landing.png" alt="" class="w-100">
+        <div class="img-container position-absolute w-100 h-100">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="./assets/landing-mobile.png">
+                    <source media="(min-width: 480px) and (max-width: 576px)" srcset="./assets/Landing.png">
+                    <source media="(min-width: 576px) and (max-width: 768px)" srcset="./assets/Landing.png">
+                    <source media="(min-width: 768px) and (max-width: 1440px)" srcset="./assets/Landing.png">
+                    <img src="./assets/Landing.png" alt="Landing page" class="w-100 h-100">
+                </picture>
         </div>
 
-        <div class="position-relative ms-4 pt-1 w-25">
+        <div class="header-section position-relative ms-4 pt-1 w-25">
             <img src="./assets/logo.png" alt="Logo" class="w-75 h-75">
-
+            <i class="bi bi-list d-none"></i>
         </div>
 
         <div class="infor-container position-relative">
@@ -46,7 +53,8 @@
                     <p>09:00 PM</p>
                 </div>
 
-                <a href="#form-section" class="register-btn text-uppercase text-light bg-gradient py-2 px-3 text-decoration-none">
+                <a href="#form-section"
+                    class="register-btn text-uppercase text-light bg-gradient py-2 px-3 text-decoration-none">
                     Register Now
                     <i class="bi bi-plus-lg"></i>
                 </a>
@@ -75,7 +83,7 @@
 
         <div class="people-container p-5 d-flex justify-content-around flex-wrap">
             <div class="individual-wrapper mt-3">
-                <img src="./assets/speaker-1.png" alt="Harvey Spector">
+                <img src="./assets/speaker-1.png" alt="Harvey Spector" class="w-100">
 
                 <div class="person-container mt-3">
                     <div class="role">
@@ -99,7 +107,7 @@
             </div>
 
             <div class="individual-wrapper mt-3">
-                <img src="./assets/speaker-2.png" alt="Harvey Spector">
+                <img src="./assets/speaker-2.png" alt="Harvey Spector" class="w-100">
 
                 <div class="person-container mt-3">
                     <div class="role">
@@ -123,7 +131,7 @@
             </div>
 
             <div class="individual-wrapper mt-3">
-                <img src="./assets/speaker-3.png" alt="Harvey Spector">
+                <img src="./assets/speaker-3.png" alt="Harvey Spector" class="w-100">
 
                 <div class="person-container mt-3">
                     <div class="role">
@@ -147,7 +155,7 @@
             </div>
 
             <div class="individual-wrapper mt-3">
-                <img src="./assets/speaker-4.png" alt="Harvey Spector">
+                <img src="./assets/speaker-4.png" alt="Harvey Spector" class="w-100">
 
                 <div class="person-container mt-3">
                     <div class="role">
@@ -255,7 +263,7 @@
                 </div>
 
                 <div class="logo mt-5">
-                     <img src="./assets/logo.png" alt="Logo" class="w-25">
+                    <img src="./assets/logo.png" alt="Logo" class="w-25">
 
                 </div>
             </div>
@@ -268,14 +276,14 @@
     </section>
 
     <!-- Register form section -->
-    <section id="form-section" class="my-5 px-5">
+    <section id="form-section" class="my-5 px-5 w-100">
         <div class="container">
             <div class="title-section text-uppercase text-center">
                 <p class="fs-1 fw-bold">Register now</p>
                 <p>Please fill out this form</p>
             </div>
 
-            <div class="container mt-4 w-50">
+            <div class="container mt-4 w-50 text-light">
                 <form class="row g-3">
 
                     <div class="input-container col-md-6 mb-4">
@@ -342,13 +350,19 @@
 
     <!-- Image section -->
     <section id="image-section">
-        <div class="img-container w-100">
-            <img src="./assets/Footer.png" alt="" class="w-100">
+        <div class="img-container w-100 h-100">
+            <picture>
+                <source media="(max-width: 480px)" srcset="./assets/footer-mobile.png">
+                <source media="(min-width: 480px) and (max-width: 576px)" srcset="./assets/footer-mobile.png">
+                <source media="(min-width: 576px) and (max-width: 768px)" srcset="./assets/footer-mobile.png">
+                <source media="(min-width: 768px) and (max-width: 1440px)" srcset="./assets/Footer.png">
+                <img src="./assets/Footer.png" alt="Footer page" class="w-100 h-100">
+            </picture>
         </div>
     </section>
 
     <!-- Location section -->
-    <section>
+    <section id="location-section">
         <div class="container d-flex align-items-center justify-content-between">
             <div class="location-wrapper">
                 <div class="title-section text-uppercase">
@@ -367,7 +381,7 @@
                 </div>
             </div>
 
-            <div class="img-container w-50">
+            <div class="img-container w-50 overflow-hidden">
                 <img src="./assets/location.png" alt="" class="w-100">
             </div>
         </div>
@@ -375,20 +389,20 @@
 
     <!-- Footer section -->
     <footer>
-
         <div class="text-center my-4">
             <img src="./assets/logo.png" alt="Logo">
         </div>
 
         <div class="container d-flex justify-content-between">
-            <ul class="list-unstyled d-flex justify-content-around w-25 text-decoration-none text-uppercase text-light fw-bold">
+            <ul
+                class="list-unstyled d-flex justify-content-around w-25 text-decoration-none text-uppercase text-light fw-bold">
                 <li><a href="" class="text-decoration-none text-light">work</a></li>
                 <li><a href="" class="text-decoration-none text-light">job</a></li>
                 <li><a href="" class="text-decoration-none text-light">about</a></li>
                 <li><a href="" class="text-decoration-none text-light">office</a></li>
             </ul>
 
-            <ul class="list-unstyled d-flex justify-content-around" style="width: 15%;"> 
+            <ul class="list-unstyled d-flex justify-content-around" style="width: 15%;">
                 <li><i class="bi bi-linkedin"></i></li>
                 <li><i class="bi bi-facebook"></i></li>
                 <li><i class="bi bi-twitter"></i></li>
